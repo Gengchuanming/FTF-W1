@@ -1,0 +1,27 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Filee.App.ViewModels.Pages"
+             xmlns:c="using:Filee.App.Controls"
+             x:Class="Filee.App.Views.Pages.AboutPage"
+             x:DataType="vm:AboutPageViewModel">
+  <StackPanel Spacing="18">
+    <TextBlock Classes="h1" Text="{DynamicResource about.title}" />
+    <Border Classes="card">
+      <StackPanel Orientation="Horizontal" Spacing="18">
+        <Image Source="avares://FTF/Assets/Icons/ftf.png" Width="72" Height="72" />
+        <StackPanel VerticalAlignment="Center" Spacing="4">
+          <TextBlock Text="{DynamicResource app.name}" FontSize="24" FontWeight="Bold" />
+          <TextBlock Classes="muted" Text="{Binding Version}" />
+          <TextBlock Classes="muted" Text="{DynamicResource about.license}" />
+        </StackPanel>
+      </StackPanel>
+    </Border>
+    <Border Classes="card">
+      <StackPanel Spacing="8">
+        <TextBlock Classes="h2" Text="{DynamicResource about.notices}" />
+        <!-- The notices are in English: left to right in every language. -->
+        <c:MarkdownView Markdown="{Binding Notices}" SkipTitle="True" FlowDirection="LeftToRight" />
+      </StackPanel>
+    </Border>
+  </StackPanel>
+</UserControl>
