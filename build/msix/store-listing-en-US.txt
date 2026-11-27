@@ -1,0 +1,35 @@
+[App name]
+File to Files
+
+[Short description] (under 80 characters)
+Drag a file with Ctrl, drop it on the format ring. 263 formats, fully offline.
+
+[Full description]
+File to Files - drag it, drop it, done.
+
+No windows to open, no menus to dig through. Hold Ctrl and drag any file: a ring of formats appears right next to your cursor. Drop the file onto the format you want and the conversion runs. Results are saved next to the original file, entirely on your own computer.
+
+Key features
+- Format ring at your cursor: only formats valid for the file you are dragging are shown. Press Tab or scroll the mouse wheel to flip the ring for less common formats and tools.
+- 263 formats: images, PDF, Word, Excel, PowerPoint, HWP, ebooks, archives, fonts, CAD, 3D models and geospatial data. Most formats work out of the box - no Office or other software required.
+- Drag straight from your browser: images, file links and downloads from Chrome, Edge or Firefox can be dropped in and converted.
+- Crop before converting: open images one by one, draw a selection, choose a ratio, and save only the part you selected.
+- PDF tools: merge, split, page ranges, compress, and convert to Word or images.
+- Batch conversion: multiple files processed in parallel. Multi-step routes (for example HWP to DOCX) are planned automatically.
+- Folder watch: files dropped into a watched folder are converted automatically.
+- Toolbar ring: arrange the formats you use per file type, with presets for quality, size, DPI and output location.
+- Recent conversions: thumbnails on the home page, open a result directly or with another app.
+- Multiple entry points: Explorer context menu, keyboard shortcuts, and a drop zone.
+- Light and dark themes, with a choice of accent colors and multiple interface languages.
+
+Privacy first
+- No uploads: no account, no telemetry, no analytics, no advertising, no crash reporting.
+- Settings and conversion history stay on your PC in %APPDATA%\FTF. The app does not check for updates.
+- The internet is used only in two cases: when you choose to download an optional conversion engine, or when you drag a link from a web browser for FTF to fetch and convert.
+
+A few advanced formats (LibreOffice documents, Pandoc text, FFmpeg video, calibre ebooks, and others) need an extra conversion engine. FTF downloads these from their official sources only after you confirm, and verifies each with a pinned SHA-256 hash.
+
+Supports Windows 10 / 11 (x64). Free and open source.
+
+[Keywords]
+file converter;format converter;image converter;PDF;video converter;audio converter;Word;Excel;drag and drop;offline;batch convert;ebook;CAD;3D model

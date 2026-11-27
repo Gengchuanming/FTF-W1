@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!-- MSIX打包配置 -->
+    <MSIXEnabled>true</MSIXEnabled>
+
+    <!-- 包名称 (应与AppxManifest.xml中的Name一致) -->
+    <MSIXPackageName>FileeFTF</MSIXPackageName>
+
+    <!-- 包发布者 -->
+    <MSIXPublisher>CN=Filee</MSIXPublisher>
+
+    <!-- 默认版本 -->
+    <MSIXVersion>1.0.0.0</MSIXVersion>
+
+    <!-- 应用显示名称 -->
+    <MSIXDisplayName>Filee FTF</MSIXDisplayName>
+
+    <!-- 发布者显示名称 -->
+    <MSIXPublisherDisplayName>Filee FTF</MSIXPublisherDisplayName>
+
+    <!-- 清单文件路径 -->
+    <MSIXManifest>AppxManifest.xml</MSIXManifest>
+
+    <!-- 启用自包含发布 -->
+    <PublishSingleFile>true</PublishSingleFile>
+
+    <!-- 包含原生库 -->
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+
+    <!-- 启用压缩 -->
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+
+    <!-- 启用修剪 -->
+    <PublishTrimmed>true</PublishTrimmed>
+
+    <!-- 完整修剪模式 -->
+    <TrimMode>full</TrimMode>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- MSIX清单文件 -->
+    <None Include="$(MSBuildProjectDirectory)\AppxManifest.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!-- MSIX打包目标 -->
+  <Target Name="PackMSIX" AfterTargets="Build" Condition="'$(MSIXEnabled)' == 'true'">
+    <PropertyGroup>
+      <MSIXPackageOutputDir>$(OutputPath)AppPackages\</MSIXPackageOutputDir>
+      <MSIXPackageOutputName>$(MSIXPackageName)_$(MSIXVersion)_x64_Release</MSIXPackageOutputName>
+    </PropertyGroup>
+
+    <!-- 创建输出目录 -->
+    <MakeDir Directories="$(MSIXPackageOutputDir)" />
+
+    <!-- 这里可以添加自定义MSIX打包逻辑 -->
+    <!-- 实际MSIX打包需要使用MSIX Packaging Tools或Visual Studio -->
+    <Message Text="MSIX打包已启用 (使用Visual Studio打包以生成实际的MSIX包)" Importance="high" />
+  </Target>
+</Project>

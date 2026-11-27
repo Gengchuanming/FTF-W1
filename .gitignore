@@ -30,3 +30,15 @@ Thumbs.db
 # Fonts are downloaded by build/fetch-fonts.ps1
 src/Filee.App/Assets/Fonts/*.ttf
 src/Filee.App/Assets/Fonts/*.otf
+
+# MSIX Package
+AppPackages/
+*.msix
+*.msixbundle
+*.appx
+*.appxbundle
+*.msixupload
+out/
+
+# WorkBuddy local assistant data
+.workbuddy/

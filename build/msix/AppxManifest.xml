@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedCapabilities"
+  IgnorableNamespaces="uap uap3 rescap">
+
+  <Identity
+    Name="FileeFTF"
+    Publisher="CN=YourPublisherName"
+    Version="1.0.0.0" />
+
+  <Properties>
+    <DisplayName>Filee FTF</DisplayName>
+    <PublisherDisplayName>Your Publisher Name</PublisherDisplayName>
+    <Logo>Assets\Icons\ftf.png</Logo>
+  </Properties>
+
+  <Resources>
+    <Resource Language="en-us" />
+    <Resource Language="zh-cn" />
+  </Resources>
+
+  <Applications>
+    <Application Id="FileeFTF" Executable="FTF.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements
+        BackgroundColor="#1e1e1e"
+        DisplayName="Filee FTF"
+        Square150x150Logo="Assets\Icons\ftf.png"
+        Square44x44Logo="Assets\Icons\ftf.png"
+        ShowNameOnAllTaskbars="true" />
+      <uap3:Extensions>
+        <uap3:Extension Category="windows.startupTask" Executable="FTF.exe" EntryPoint="Windows.FullTrustApplication">
+          <uap3:StartupTask TaskId="FileeFTFStartup" Enabled="false" DisplayName="Filee FTF" />
+        </uap3:Extension>
+      </uap3:Extensions>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+    <uap:Capability Name="documentsLibrary" />
+    <uap:Capability Name="enterpriseCloud" />
+    <uap:Capability Name="internetClient" />
+    <uap:Capability Name="internetClientServer" />
+  </Capabilities>
+
+  <Extensions>
+    <Extension Category="windows.appExecutionAlias" Executable="FTF.exe" EntryPoint="Windows.FullTrustApplication">
+      <AppExecutionAlias Alias="ftf.exe" />
+    </Extension>
+  </Extensions>
+
+</Package>
